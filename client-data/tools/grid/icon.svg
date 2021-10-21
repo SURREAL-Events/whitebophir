@@ -1,9 +1,1 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60 60" >
-	<line x1="15" y1="2" x2="15" y2="58" stroke="black" stroke-width="2" stroke-linecap="round" />
-	<line x1="30" y1="2" x2="30" y2="58" stroke="black" stroke-width="2" stroke-linecap="round" />
-	<line x1="45" y1="2" x2="45" y2="58" stroke="black" stroke-width="2" stroke-linecap="round" />
-
-	<line x1="2" y1="15" x2="58" y2="15" stroke="black" stroke-width="2" stroke-linecap="round" />
-	<line x1="2" y1="30" x2="58" y2="30" stroke="black" stroke-width="2" stroke-linecap="round" />
-	<line x1="2" y1="45" x2="58" y2="45" stroke="black" stroke-width="2" stroke-linecap="round" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M44,20V44H20V20Zm-1.85,1.85H36.62v5.53h5.53ZM34.77,34.77V29.23H29.23v5.54Zm-5.54,1.85v5.53h5.54V36.62Zm-1.85-7.39H21.85v5.54h5.53Zm7.39-1.85V21.85H29.23v5.53Zm1.85,7.39h5.53V29.23H36.62ZM21.85,21.85v5.53h5.53V21.85Zm0,20.3h5.53V36.62H21.85Zm20.3,0V36.62H36.62v5.53Z"/></svg>
