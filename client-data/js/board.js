@@ -612,6 +612,15 @@ Tools.color_chooser = document.getElementById("chooseColor");
 
 Tools.setColor = function (color) {
 	Tools.color_chooser.value = color;
+	
+	var doc = Tools.color_chooser.getSVGDocument();
+	
+	if (doc)
+	{
+		var elem = doc.getElementsByClassName("pColor")[0];
+	
+		elem.style.fill = color;
+	}
 };
 
 Tools.getColor = (function color() {
@@ -688,20 +697,27 @@ Tools.svg.height.baseVal.value = document.body.clientHeight;
     var pos = {top: 0, scroll:0};
     var menu = document.getElementById("menu");
     function menu_mousedown(evt) {
-	pos = {
-	    top: menu.scrollTop,
-	    scroll: evt.clientY
-	}
-	menu.addEventListener("mousemove", menu_mousemove);
-	document.addEventListener("mouseup", menu_mouseup);
+		pos = {
+			top: menu.scrollTop,
+			scroll: evt.clientY
+		}
+		menu.addEventListener("mousemove", menu_mousemove);
+		document.addEventListener("mouseup", menu_mouseup);
     }
     function menu_mousemove(evt) {
-	var dy = evt.clientY - pos.scroll;
-	menu.scrollTop = pos.top - dy;
+		var dy = evt.clientY - pos.scroll;
+		menu.scrollTop = pos.top - dy;
     }
     function menu_mouseup(evt) {
-	menu.removeEventListener("mousemove", menu_mousemove);
-	document.removeEventListener("mouseup", menu_mouseup);
+		menu.removeEventListener("mousemove", menu_mousemove);
+		document.removeEventListener("mouseup", menu_mouseup);
     }
     menu.addEventListener("mousedown", menu_mousedown);
+	
+	Tools.color_chooser.addEventListener("load", function() {
+		var doc = Tools.color_chooser.getSVGDocument();
+		var elem = doc.getElementsByClassName("pColor")[0];
+		
+		elem.style.fill = Tools.color_chooser.value;
+	});
 })()
