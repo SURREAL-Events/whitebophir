@@ -609,18 +609,15 @@ Tools.colorPresets = [
 ];
 
 Tools.color_chooser = document.getElementById("chooseColor");
+Tools.color_chooser_bg = document.getElementById("chooseColorBackground");
 
 Tools.setColor = function (color) {
-	Tools.color_chooser.value = color;
-	
-	var doc = Tools.color_chooser.getSVGDocument();
-	
-	if (doc)
-	{
-		var elem = doc.getElementsByClassName("pColor")[0];
-	
-		elem.style.fill = color;
-	}
+	var color_chooser = Tools.color_chooser;
+	var bg = Tools.color_chooser_bg;
+
+	color_chooser.value = color;
+
+	bg.style.backgroundColor = color;
 };
 
 Tools.getColor = (function color() {
