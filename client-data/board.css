@@ -231,8 +231,8 @@ input {
 	position: absolute;
 	mix-blend-mode: multiply;
 	pointer-events: none;
-	mask: url(http://localhost:8081/boards/palette.svg#pColor) no-repeat center / contain;
-	-webkit-mask: url(http://localhost:8081/boards/palette.svg#pColor) no-repeat center / contain;
+	mask: url(palette.svg#pColor) no-repeat center / contain;
+	-webkit-mask: url(palette.svg#pColor) no-repeat center / contain;
   }
 
 .colorPresets {
